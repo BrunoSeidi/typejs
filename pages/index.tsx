@@ -13,6 +13,8 @@ const Home: React.FC  = () => {
       </Head>
   
       <a href='/cadastro/registro'>cadastro</a>
+      <br/>
+      <a href='/login/login'>Login</a>
     </div>
   )
 }
