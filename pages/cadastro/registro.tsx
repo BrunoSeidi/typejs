@@ -1,4 +1,5 @@
 import React from "react";
+import {useState} from 'react'
 import {
   Button,
   Form,
@@ -13,7 +14,24 @@ import {
   CardBody,
 } from "reactstrap";
 
-const Cadastro: React.FC  = () => {
+const Submit =() =>{
+
+}
+
+export const Cadastro: React.FC  = () => {
+
+  const []= useState('')
+  const [nome, setNome]= useState('')
+  const [email, setEmail] = useState('')
+  const [senha, setSenha] = useState('')
+
+  const submit = () =>{
+    const cadastrando = {
+      nome, email, senha
+    }
+    console.log (cadastrando)
+  }
+
   return (
     <div className="container">
       <div className="row flex-row align-items-center justify-content-center">
@@ -29,7 +47,8 @@ const Cadastro: React.FC  = () => {
                       <Input
                         type="text"
                         name="name"
-                        id="name"
+                        id="name" value={nome}
+                        onChange = {event => setNome(event.target.value)}
                         placeholder="Full name"
                         className="text-center"
                       />
@@ -39,7 +58,8 @@ const Cadastro: React.FC  = () => {
                       <Input
                         type="email"
                         name="email"
-                        id="exampleEmail"
+                        id="exampleEmail" value={email}
+                        onChange = {event => setEmail(event.target.value)}
                         placeholder="example@example.com"
                         className="text-center"
                       />
@@ -49,13 +69,14 @@ const Cadastro: React.FC  = () => {
                       <Input
                         type="password"
                         name="password"
-                        id="examplePassword"
+                        id="examplePassword" value={senha}
+                        onChange = {event => setSenha(event.target.value)}
                         placeholder="********"
                         className="text-center"
                       />
                     </FormGroup>
                   </Col>
-                  <Button>Submit</Button>
+                  <Button onClick={submit}>Submit</Button>
                 </Form>
               </div>
             </CardBody>

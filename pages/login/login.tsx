@@ -25,21 +25,21 @@ const Login: React.FC  = () => {
                 <Form className="form mt-6">
                   <Col md={12}>
                     <FormGroup>
-                      <Label for="exampleEmail" className="text-center">Email</Label>
+                      <Label for="loginEmail" className="text-center">Email</Label>
                       <Input
                         type="email"
                         name="email"
-                        id="exampleEmail"
+                        id="loginEmail"
                         placeholder="example@example.com"
                         className="text-center"
                       />
                     </FormGroup>
                     <FormGroup>
-                      <Label for="examplePassword">Password</Label>
+                      <Label htmlFor="loginPassword">Password</Label>
                       <Input
                         type="password"
                         name="password"
-                        id="examplePassword"
+                        id="loginPassword"
                         placeholder="********"
                         className="text-center"
                       />
