@@ -14,9 +14,6 @@ import {
   CardBody,
 } from "reactstrap";
 
-const Submit =() =>{
-
-}
 
 export const Cadastro: React.FC  = () => {
 
@@ -58,10 +55,10 @@ export const Cadastro: React.FC  = () => {
                       <Input
                         type="email"
                         name="email"
-                        id="exampleEmail" value={email}
+                        id="emailLogin" value={email}
                         onChange = {event => setEmail(event.target.value)}
                         placeholder="example@example.com"
-                        className="text-center"
+                        className="email"
                       />
                     </FormGroup>
                     <FormGroup>
@@ -69,7 +66,7 @@ export const Cadastro: React.FC  = () => {
                       <Input
                         type="password"
                         name="password"
-                        id="examplePassword" value={senha}
+                        id="passwordLogin" value={senha}
                         onChange = {event => setSenha(event.target.value)}
                         placeholder="********"
                         className="text-center"
