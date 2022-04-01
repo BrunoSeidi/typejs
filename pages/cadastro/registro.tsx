@@ -13,7 +13,7 @@ import {
   CardBody,
 } from "reactstrap";
 
-export default function cadastro() {
+const Cadastro: React.FC  = () => {
   return (
     <div className="container">
       <div className="row flex-row align-items-center justify-content-center">
@@ -65,3 +65,4 @@ export default function cadastro() {
     </div>
   );
 }
+export default Cadastro;

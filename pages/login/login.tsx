@@ -13,7 +13,7 @@ import {
   CardBody,
 } from "reactstrap";
 
-export default function login() {
+const Login: React.FC  = () => {
   return (
     <div className="container">
       <div className="row flex-row align-items-center justify-content-center">
@@ -55,3 +55,4 @@ export default function login() {
     </div>
   );
 }
+export default Login;
