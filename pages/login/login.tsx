@@ -37,7 +37,7 @@ export const Login: React.FC  = () => {
                 <Form className="form mt-6">
                   <Col md={12}>
                     <FormGroup>
-                      <Label for="loginEmail" className="text-center">Email</Label>
+                      <Label htmlFor="email" className="text-center">Email</Label>
                       <Input
                         type="email"
                         name="email"

@@ -1,5 +1,6 @@
 import React from "react";
 import {useState} from 'react'
+
 import {
   Button,
   Form,
@@ -42,6 +43,7 @@ export const Cadastro: React.FC  = () => {
                     <FormGroup>
                       <Label for="name">Name</Label>
                       <Input
+                        required
                         type="text"
                         name="name"
                         id="name" value={nome}
@@ -59,6 +61,7 @@ export const Cadastro: React.FC  = () => {
                         onChange = {event => setEmail(event.target.value)}
                         placeholder="example@example.com"
                         className="text-center"
+                        required
                       />
                     </FormGroup>
                     <FormGroup>
@@ -70,6 +73,7 @@ export const Cadastro: React.FC  = () => {
                         onChange = {event => setSenha(event.target.value)}
                         placeholder="********"
                         className="text-center"
+                        required
                       />
                     </FormGroup>
                   </Col>
