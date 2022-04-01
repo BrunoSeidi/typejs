@@ -16,10 +16,10 @@ import {
 
 const Formulario: React.FC = () => {
     return (
-        <div>
+        <div className="container">
             <form method="post">
                 <div className="row">
-                    <div className='col'>
+                    <div className='col-md-12'>
 
                         <h2>WEG EQUIPAMENTOS S.A - MOTORES</h2>
                         <div>
