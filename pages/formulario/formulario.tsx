@@ -47,7 +47,7 @@ const Formulario: React.FC = () => {
                     </div>
                     <div>
                         <Label for="Endereço">Endereço</Label>
-                        <Input type="adress" className="form-control" placeholder="Endereço"/>
+                        <Input type="text" className="form-control" placeholder="Endereço"/>
                     </div>
                     <div>
                         <Label for="CNPJ">CNPJ</Label>
