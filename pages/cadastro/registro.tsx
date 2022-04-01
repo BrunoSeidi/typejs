@@ -58,7 +58,7 @@ export const Cadastro: React.FC  = () => {
                         id="emailLogin" value={email}
                         onChange = {event => setEmail(event.target.value)}
                         placeholder="example@example.com"
-                        className="email"
+                        className="text-center"
                       />
                     </FormGroup>
                     <FormGroup>

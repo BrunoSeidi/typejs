@@ -6,7 +6,7 @@ import React from "react";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div>
-    <img src="./wegImages.png" width="7%"></img>
+    <img src="/wegimage.jpg" width="7%"></img>
     <Component {...pageProps} />
     </div>
   )
