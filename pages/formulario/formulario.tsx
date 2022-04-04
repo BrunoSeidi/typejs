@@ -12,8 +12,6 @@ import {
     CardBody,
 } from "reactstrap";
 
-
-
 const Formulario: React.FC = () => {
     return (
         <div className="container">
