@@ -15,10 +15,10 @@ import {useState} from 'react'
 
 const Formulario: React.FC = () => {
 const []= useState('')
-  const [nomeFilial, setNome] = useState('')
-  const [email1, setEmail] = useState('')
+  const [nomeFilial, setNome] = useState<string>('')
+  const [email1, setEmail] = useState<string>('')
   const [adress1, setAdress] = useState('')
-  const [contato, setContato] = useState('')
+  const [contato, setContato] = useState<string>()
   const submit = () =>{
     const logar = {
       nomeFilial, email1, adress1, contato
@@ -32,7 +32,6 @@ const []= useState('')
             <form method="post">
                 <div className="row">
                     <div className='col-md-12'>
-
                         <h2>WEG EQUIPAMENTOS S.A - MOTORES</h2>
                         <div>
                             <Label for="Nome da Filial">Nome da Filial</Label>
@@ -43,23 +42,23 @@ const []= useState('')
                             onChange = {event => setNome(event.target.value)}
                             />
                         </div>
-                        <div>
+                        <div className="col-md-6">
                             <Label for="E-mail">Email</Label>
                             <Input type="email" className="form-control" placeholder="E-mail" id="email1" value={email1}
                             onChange = {event => setEmail(event.target.value)}/>
+                        </div>
+                        <div className="col-md-6">
+                            <Label for="Contato">Contato</Label>
+                            <Input type="text" className="form-control" placeholder="Contato" id="telefone" value={contato}
+                            onChange = {event => setContato(event.target.value)}/>
                         </div>
                         <div>
                             <Label for="Endereço da filial">Endereço da filial</Label>
                             <Input type="text" className="form-control" placeholder="Endereço" value={adress1}
                             onChange = {event => setAdress(event.target.value)}/>
                         </div>
-                        <div>
-                            <Label for="Contato">Contato</Label>
-                            <Input type="text" className="form-control" placeholder="Contato" id="telefone" value={contato}
-                            onChange = {event => setContato(event.target.value)}/>
-                        </div>
 
-                        <h2>DADOS DA EMPRESA</h2>
+                        <h2 className="mt-3">DADOS DA EMPRESA</h2>
 
                         <div>
                             <Label for="Razão Social">Razão Social</Label>
@@ -73,7 +72,7 @@ const []= useState('')
                             <Label for="Endereço">Endereço</Label>
                             <Input type="text" className="form-control" placeholder="Endereço" />
                         </div>
-                        <div>
+                        <div className="col-md-4">
                             <Label for="CNPJ">CNPJ</Label>
                             <Input type="text" className="form-control" placeholder="CNPJ" />
                         </div>
