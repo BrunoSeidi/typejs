@@ -11,8 +11,22 @@ import {
     Card,
     CardBody,
 } from "reactstrap";
+import {useState} from 'react'
 
 const Formulario: React.FC = () => {
+const []= useState('')
+  const [nomeFilial, setNome] = useState('')
+  const [email1, setEmail] = useState('')
+  const [adress1, setAdress] = useState('')
+  const [contato, setContato] = useState('')
+  const submit = () =>{
+    const logar = {
+      nomeFilial, email1, adress1, contato
+    }
+    //testando logar, lembrar de apagar depois
+    console.log (logar)
+  }
+
     return (
         <div className="container">
             <form method="post">
@@ -22,24 +36,34 @@ const Formulario: React.FC = () => {
                         <h2>WEG EQUIPAMENTOS S.A - MOTORES</h2>
                         <div>
                             <Label for="Nome da Filial">Nome da Filial</Label>
-                            <Input type="text" classNameName="form-control" placeholder="Nome da Filial" />
+                            <Input type="text" 
+                            classNameName="form-control" 
+                            placeholder="Nome da Filial" 
+                            id="nomefilial" value={nomeFilial}
+                            onChange = {event => setNome(event.target.value)}
+                            />
                         </div>
                         <div>
                             <Label for="E-mail">Email</Label>
-                            <Input type="email" className="form-control" placeholder="E-mail" />
+                            <Input type="email" className="form-control" placeholder="E-mail" id="email1" value={email1}
+                            onChange = {event => setEmail(event.target.value)}/>
                         </div>
                         <div>
                             <Label for="Endereço da filial">Endereço da filial</Label>
-                            <Input type="text" className="form-control" placeholder="Endereço" />
+                            <Input type="text" className="form-control" placeholder="Endereço" value={adress1}
+                            onChange = {event => setAdress(event.target.value)}/>
                         </div>
                         <div>
                             <Label for="Contato">Contato</Label>
-                            <Input type="text" className="form-control" placeholder="Contato" id="telefone" />
+                            <Input type="text" className="form-control" placeholder="Contato" id="telefone" value={contato}
+                            onChange = {event => setContato(event.target.value)}/>
                         </div>
+
                         <h2>DADOS DA EMPRESA</h2>
+
                         <div>
                             <Label for="Razão Social">Razão Social</Label>
-                            <Input type="text" className="form-control" placeholder="Razão Social" />
+                            <Input type="text" className="form-control" placeholder="Razao Social" />
                         </div>
                         <div>
                             <Label for="Nome de Fantasia">Nome de Fantasia</Label>
@@ -79,6 +103,9 @@ const Formulario: React.FC = () => {
                                 <option value="1">Motores elétricos CA/BT Ex (Atmosferas Explosivas)</option>
                                 <option value="2">Motores elétricos CA/AT (Alta Tensão)</option>
                             </select>
+                        </div>
+                        <div>
+                        <Button onClick={submit} className='mt-4'>Submit</Button>
                         </div>
                     </div>
                 </div>
