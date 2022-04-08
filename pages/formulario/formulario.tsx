@@ -11,14 +11,17 @@ import {
     Card,
     CardBody,
 } from "reactstrap";
+function refreshPage(){ 
+    window.location.reload(); 
+}
 import {useState} from 'react'
 
 const Formulario: React.FC = () => {
 const []= useState('')
   const [nomeFilial, setNome] = useState<string>('')
   const [email1, setEmail] = useState<string>('')
-  const [adress1, setAdress] = useState('')
-  const [contato, setContato] = useState<string>()
+  const [adress1, setAdress] = useState<string>('')
+  const [contato, setContato] = useState<string>('')
   const submit = () =>{
     const logar = {
       nomeFilial, email1, adress1, contato
@@ -36,10 +39,11 @@ const []= useState('')
                         <div>
                             <Label for="Nome da Filial">Nome da Filial</Label>
                             <Input type="text" 
-                            classNameName="form-control" 
+                            className="form-control" 
                             placeholder="Nome da Filial" 
                             id="nomefilial" value={nomeFilial}
                             onChange = {event => setNome(event.target.value)}
+                            
                             />
                         </div>
                         <div className="col-md-6">
